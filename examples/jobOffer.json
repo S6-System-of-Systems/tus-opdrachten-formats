@@ -1,0 +1,178 @@
+{
+    "id": "1234567891232342341",
+    "statusCode": "Active",
+    "url": "https://sample/job1.html",
+    "source": "EIGHTVANCE",
+    "creation_date": "2017-12-12",
+    "languageCode": "en",
+    "organization": {
+        "is_intermediary": true,
+        "name": "8vance Matching Technologies",
+        "department": "R&D",
+        "domainName": "https://8vance.com/",
+        "address": {
+            "line": "Kazernestraat 19",
+            "country": "Netherlands",
+            "region": "Limburg",
+            "city": "Venlo",
+            "postalCode": "5928 NL",
+            "geoLocation": {
+                "latitude": 51.3741600,
+                "longitude": 6.1555160
+            },
+            "formattedAddress": "Kazernestraat 19, 5928 NL Venlo, Netherlands"
+        },
+        "phone": "+31 77 8080 140",
+        "email": "info@8vance.com",
+        "industries": [
+            {"name": "Information services"},
+            {"name": "Human resources"}      
+        ],
+        "size": "<10",
+        "geographicalSpan": "multinational < 5 countries",
+        "description": "8vance is a high-tech start-up who has developed the first deep matching platform for talents and recruiters. Our platform combines with a virtual recruitment and career assistent called AIMA (Automatic Intelligent Matching Agent) who does all the work. AIMA is based on the 8vance state-of-the-art platform matching technology. This technology matches jobs and talents better and faster."
+    },
+    "position": {
+        "function": {
+            "title": "Senior Data Scientist",
+            "level_modifier": "Senior"
+        },
+        "location": {
+            "address": {
+                "line": "Kazernestraat 19",
+                "country": "Netherlands",
+                "region": "Limburg",
+                "city": "Venlo",
+                "postalCode": "5928 NL",
+                "geoLocation": {
+                    "latitude": 51.3741600,
+                    "longitude": 6.1555160
+                }
+            },
+            "relocationRequired": false
+        },
+        "travel": {
+            "required": true,
+            "international": true,
+            "travelTypes": [
+                "car",
+                "airplane"
+            ],
+            "travelPercentage": 5
+        },
+        "benefits": {
+            "salary": {
+                "currency": "EUR",
+                "salaryRangeMinimum": 2800,
+                "salaryRangeMaximum": 3100,
+                "salaryTimeInterval": "month",
+                "annualSalaryRange": "30,000 - 39,000",
+                "salaryVariablePart": "no variable salary",
+                "hideSalary": false
+            },
+            "additionalBenefits": [
+                "healthcareSupport"
+            ],
+            "vacationDays": 25,
+            "advDays": 0
+        },
+        "contract": {
+            "contractType": [
+                "openEnded"
+            ],
+            "workingHoursMinimum": 40,
+            "workingHoursMaximum": 40,
+            "workingHoursType": "fulltime",
+            "overtimeWork": true,
+            "shiftWork": false
+        },
+        "educationRequirements": {
+            "programs": [
+                "Data Science",
+                "Statistics",
+                "Computer Science"
+            ],
+            "educationalDegrees": [{
+                "degree": "master",
+                "level": 11
+            }, {
+                "degree": "phd",
+                "level": 15
+            }]
+        },
+        "workExperienceRequirements": {
+            "positions": [{
+                "title": "Data Scientist",
+                "level_modifier": "Senior"
+            }],
+            "department": "Research and Development",
+            "industries": [
+                {"name": "Computer, internet, information technology, semiconductors"}                
+            ],
+            "experienceYearsMinimum": 2,
+            "experienceYearsMaximum": 5,
+            "description": "The candidate should have experience in Data Science for HR.",
+            "level": "Level 5-Ensure, Advice",
+            "organizationSize": "<10",
+            "organizationGeographicalSpan": "multinational < 5 countries"
+        },
+        "certificationRequirements": [{
+            "name": "ITIL Foundation",
+            "effectiveTimePeriod": {
+                "validFrom": "2017-10-01",
+                "validTo": null
+            },
+            "issuingAuthority": "ICMB",
+            "description": "Certificate of detailed practices for IT service management."
+        }],
+        "skillRequirements": [
+            "Python",
+            "Cassandra",
+            "Big Data Analysis"
+        ],
+        "languageRequirements": [{
+            "language": "English",
+            "proficiency": "Full professional proficiency"
+        }, {
+            "language": "Dutch",
+            "proficiency": "Limited working proficiency"
+        }],
+        "description": "We are looking for a Data Scientist to complete our team. You like diving into data and making sense out of it? You do not think that 100k of profiles is already big data? If you have experience in big data analysis, are fit in cassandra and postgre, and also have some programming skills (preferable Python), apply for this position - we have cookies."
+    },
+    "applicationInformation": {
+        "contacts": [{
+            "name": "Anne Winters",
+            "role": "Recruiter",
+            "address": {
+                "line": "Kazernestraat 19",
+                "country": "Netherlands",
+                "region": "Limburg",
+                "city": "Venlo",
+                "postalCode": "5928 NL",
+                "postOfficeBox": null,
+                "geoLocation": {
+                    "latitude": 51.3741600,
+                    "longitude": 6.1555160
+                },
+                "formattedAddress": "Kazernestraat 19, 5928 NL Venlo, Netherlands"
+            },
+            "phone": "+31 77 8080 140",
+            "email": "anne.winters@eightvance.com"
+        }],
+        "applicationMethods": {
+            "instructions": "Please create an account at 'https://app.8vance.com' and apply for the job.",
+            "applicationTrackingSystem": "https://app.8vance.com"
+        },
+        "positionAvailability": {
+            "start": "2017-10-01",
+            "end": "2017-11-30"
+        },
+        "applicationPeriod": {
+            "start": "2017-08-01",
+            "end": "2017-09-30"
+        },
+        "additional_links": [
+            "https://sample/job1-additional-info.html"
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "version": "1.0",
+    "title": "SkillProficiencyListType",
+    "description": "List of skill proficiencies.",
+    "enum": [
+        "Novice",
+		"Advanced Beginner",
+		"Competent",
+		"Proficient",
+		"Expert",
+		"Master"
+    ]
+}

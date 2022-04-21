@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "title": "CertificationType",
+  "description": "A document or confirmation certifying the status or acquirements of the bearer, or his fulfilment of conditions which authorize him to act or practise in a specified way; hence, often equal to a certificate.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The common name of the certificate.",
+      "type": "string"
+    },
+    "effectiveTimePeriod": {
+      "description": "The time period for which the certificiate is valid and considered active.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "validFrom": {
+          "description": "Date formatted as either 'yyyy-mm-dd'",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "validTo": {
+          "description": "Date formatted as either 'yyyy-mm-dd'",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "minProperties": 1
+    },
+    "issuingAuthority": {
+      "description": "The organization that issued the certificate.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "description": "Description of the certificate",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

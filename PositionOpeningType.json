@@ -1,0 +1,88 @@
+{
+  "version": "1.0",
+  "title": "PositionOpeningType",
+  "description": "Complete data on a position opening",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "UNIQUE ID of the position opening in the 8vance system.",
+      "type": "string"
+    },
+    "statusCode": {
+      "description": "Status of position opening; typical values: Active, Closed, Incomplete.",
+      "$ref": "./position/JobStatusCodeListType.json#"
+    },
+    "url": {
+      "description": "URL of the position opening, if available.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source": {
+      "description": "Identifier of the source of the profile, e.g. the customer name.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+	  "customer_source": {
+      "description": "Identifier of the customer source of the profile",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "creation_date": {
+      "description": "Creation date of the position opening in the format yyyy-mm-dd.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "import_date": {
+      "description": "Date of scraping/importing the profile to the 8vance system, format yyyy-mm-dd.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "languageCode": {
+      "description": "The primary language of the content of the profile as two-letter codes (ISO 639-1).",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "organization": {
+      "description": "Details regarding the organization that has an open position",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "./organization/OrganizationType.json#"
+        }
+      ]
+    },
+    "position": {
+      "description": "Details regarding the position",
+      "$ref": "./position/PositionProfileType.json#"
+    },
+    "applicationInformation": {
+      "description": "Information about the application process",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "./position/ApplicationInformationType.json#"
+        }
+      ]
+    }
+  },
+  "required": [
+    "position",
+    "id"
+  ]
+}

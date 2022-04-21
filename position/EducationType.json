@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "title": "EducationType",
+  "description": "Contains educations requirements regarding a position opening",
+  "type": "object",
+  "properties": {
+    "programs": {
+      "description": "List of alternative educational programs/subjects/majors that the candidate should have attended. If more than one program is given, the programs are handled as alternatives (linked by 'or'), e.g. ['Psychology', 'Linguistics'] would mean, that the candidate attended the program 'Psychology' or 'Linguistics', not necessarily both.",
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      }
+    },
+    "educationalDegrees": {
+      "description": "List of alternative educational degrees that a student should have acquired. A degree is a recognized completion of studies at a school (such as a college or university). A certificate, which may be a diploma or degree, is generally issued in recognition of having completed the course of study. Examples: 'bachelor', 'master', 'm.sc.', 'b.ed.', etc.  If more than one degree is given, the degrees are handled as alternatives (linked by 'or'), e.g. ['master', 'bachelor'] would mean, that the candidate should have acquired a 'master' or a 'bachelor' degree, not necessarily both.",
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "degree": {
+            "description": "Name of the degree, e.g. 'bachelor' or 'm.sc.'.",
+            "type": ["string", "null"]
+          },
+          "level": {
+            "description": "Degree level based on the 8vance degree level model.",
+            "type": ["number", "null"],
+            "minimum": 1,
+            "maximum": 15
+          }
+        },
+        "minProperties": 1
+      }
+    }
+  },
+  "minProperties": 1
+}

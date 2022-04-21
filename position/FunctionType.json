@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "title": "FunctionType",
+  "description": "Information about an function.",
+  "type": "object",
+  "properties": {
+    "title": {
+      "description": "Name of the function.",
+      "type": ["string", "null"]
+    },
+    "level_modifier": {
+      "description": "Modifier in the function name, e.g. 'junior' or 'senior'.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "required": ["title"]
+  }
+}

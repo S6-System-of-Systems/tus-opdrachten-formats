@@ -1,0 +1,22 @@
+{
+    "version": "1.0",
+    "title": "AddressType",
+    "type": "object",
+    "properties": {
+        "line": {
+            "description": "Street line address",
+            "type": ["string", "null"]
+        },
+        "country": {"type": ["string", "null"] },
+		"region": {"type": ["string", "null"] },
+        "city": { "type": "string" },
+        "postalCode": {"type": ["string", "null"] },
+        "postOfficeBox": {"type": ["string", "null"] },
+        "geoLocation": { "$ref": "GeoType.json#" },
+        "formattedAddress": { 
+			"description": "Full address, i.e. a combination of all the available address parts.",
+			"type": ["string", "null"]
+		}
+    },
+	"required": ["city"]
+}

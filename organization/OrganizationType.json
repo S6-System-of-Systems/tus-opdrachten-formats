@@ -1,0 +1,95 @@
+{
+    "version": "1.0",
+    "title": "OrganizationType",
+    "description": "Basic information to identify and reference a specific organization.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "Name of the organization.",
+            "type": "string"
+        },
+        "department": {
+            "description": "Name of the department in the organization.",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "domainName": {
+            "description": "The internet domain to help identify the organization and a reference to find additional information.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
+        },
+        "address": {
+            "oneOf": [{
+                "type": "null"
+            }, {
+                "$ref": "../communication/AddressType.json#"
+            }]
+        },
+        "phone": {
+            "description": "Phone number of the organization.",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "fax": {
+            "description": "Fax number of the organization (yes, there are still organizations having fax).",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "email": {
+            "description": "Email address of the organization.",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "industries": {
+            "description": "Industry the organization belongs to, e.g. 'Construction', 'Accounting' or 'Higher Education'.",
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "../position/IndustryType.json#"
+            }
+        },
+        "size": {
+            "description": "Company size with categories ranging from '<10' to '>10,000'.",
+            "oneOf": [{
+                "type": "null"
+            }, {
+                "$ref": "OrganizationSizeListType.json#"
+            }]
+        },
+        "geographicalSpan": {
+            "description": "Geographical span of the company ranging from 'local' to 'true global player'.",
+            "oneOf": [{
+                "type": "null"
+            }, {
+                "$ref": "OrganizationGeographicalSpanListType.json#"
+            }]
+        },
+        "description": {
+            "description": "Free text description of the company.",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "is_intermediary": {
+            "description": "Boolean to indicate whether the company is an intermediary or not",
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "name"
+    ]
+}

@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "title": "ContractType",
+  "description": "Information on the contract type, work hours per week, overtime and shift work",
+  "type": "object",
+  "properties": {
+    "contractType": {
+      "description": "Contract type, e.g. 'open ended', 'interim' or 'temporary'.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "ContractListType.json#"
+          }
+        }
+      ]
+    },
+    "workingHoursMinimum": {
+      "description": "Minimal number of working hours per time interval",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 50
+    },
+    "workingHoursMaximum": {
+      "description": "Maximal number of working hours per time interval",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 50
+    },
+    "workingHoursType": {
+      "description": "Indicator for the amount of working hours, e.g. 'parttime' or 'fulltime'.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "overtimeWork": {
+      "description": "Is there a need to work outside of regular hours? Default value is 'false'.",
+      "type": "boolean"
+    },
+    "shiftWork": {
+      "description": "Is there a need to work in shifts? Default value is 'false'.",
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "version": "1.0",
+    "title": "OrganizationGeographicalSpanListType",
+    "description": "List of descriptors for the geographical span of the organization.",
+    "enum": [
+        "local",
+        "mainly regional",
+        "mainly national",
+        "multinational < 5 countries",
+        "multinational > 5 countries",
+		"true global player"
+    ]
+}

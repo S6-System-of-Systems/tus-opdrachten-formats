@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "title": "ApplicationInformationType",
+  "description": "Metadata regarding a position opening (contacts, application process, job availability).",
+  "type": "object",
+  "properties": {
+    "contacts": {
+      "description": "List of contacts for the open position.",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "../communication/PersonContactType.json#"
+      }
+    },
+    "applicationMethods": {
+      "description": "Details regarding application process",
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "instructions": {
+          "description": "Textual information regarding the application process.",
+          "type": "string"
+        },
+        "applicationTrackingSystem": {
+          "description": "Link to the application tracking system that the user should use for applying",
+          "type": "string"
+        }
+      },
+      "minProperties": 1
+    },
+    "positionAvailability": {
+      "description": "The availability of this position. For temporary jobs an end date can be given.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "start": {
+          "description": "The start date of the availability period. Formatted as 'yyyy-mm-dd'.",
+          "type": "string"
+        },
+        "end": {
+          "description": "The end date of the of the availability period. Formatted as 'yyyy-mm-dd'.",
+          "type": "string"
+        }
+      },
+      "minProperties": 1
+    },
+    "applicationPeriod": {
+      "description": "The period for applications.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "start": {
+          "description": "The start date of the application period. Formatted as 'yyyy-mm-dd', 'yyyy-mm' or 'yyyy'.",
+          "type": "string"
+        },
+        "end": {
+          "description": "The end date of the of the application period. Formatted as 'yyyy-mm-dd', 'yyyy-mm' or 'yyyy'.",
+          "type": "string"
+        }
+      },
+      "minProperties": 1
+    },
+    "additional_links": {
+      "description": "Additional links that might be relevant for the application",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "minProperties": 1
+}

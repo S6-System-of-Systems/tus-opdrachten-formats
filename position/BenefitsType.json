@@ -1,0 +1,120 @@
+{
+  "version": "1.0",
+  "title": "BenefitsType",
+  "description": "Salary, vacation days and additional benefits.",
+  "type": [
+    "object",
+    "null"
+  ],
+  "properties": {
+    "salary": {
+      "description": "Salary information",
+      "type": "object",
+      "properties": {
+        "currency": {
+          "description": "Currency of the salary",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "CurrencyListType.json#"
+            }
+          ]
+        },
+        "salaryRangeMinimum": {
+          "description": "Minimal salary.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "salaryRangeMaximum": {
+          "description": "Maximal salary.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "salaryTimeInterval": {
+          "description": "Time interval for the salary, e.g. hour, day, month, year.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "TimeIntervalListType.json#"
+            }
+          ]
+        },
+        "annualSalaryRange": {
+          "description": "Annual salary range.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "AnnualSalaryListType.json#"
+            }
+          ]
+        },
+        "salaryVariablePart": {
+          "description": "Variable part of the salary in a range of percentages, the default value is 'no variable salary'.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "VariableSalaryListType.json#"
+            }
+          ]
+        },
+        "hideSalary": {
+          "description": "Should the salary information be hidden in platform? If not set, the default value is 'false'.",
+          "type": "boolean"
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "annualSalaryRange"
+          ]
+        },
+        {
+          "required": [
+            "salaryRangeMinimum",
+            "salaryRangeMaximum",
+            "salaryTimeInterval"
+          ]
+        }
+      ],
+      "required": [
+        "currency"
+      ]
+    },
+    "additionalBenefits": {
+      "description": "List of additional benefits like company car or pension plan.",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "BenefitsListType.json#"
+      }
+    },
+    "vacationDays": {
+      "description": "Number of regular vacation days.",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "advDays": {
+      "description": "Number of adv (adv = arbeids duur verkorting) days - additional vacation days in the Netherlands used for the reduction of working hours.",
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

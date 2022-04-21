@@ -1,0 +1,15 @@
+{
+    "version": "1.0",
+    "title": "PositionLevelListType",
+    "description": "List of positionlevel types.",
+    "enum": [
+        "Level 1-Follow",
+		"Level 2-Assist",
+		"Level 3-Apply",
+		"Level 4-Enable",
+		"Level 5-Ensure, Advice",
+		"Level 6-Initiate, Influence",
+		"Level 7-Set Strategy, Mobilise",
+        "Level 8-Full P&L responsible"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+	"version": "1.0",
+	"title": "LanguageProficiencyListType",
+	"description": "List of skill proficiencies.",
+	"enum": [
+		"elementary proficiency",
+		"Elementary proficiency",
+		"limited working proficiency",
+		"Limited working proficiency",
+		"professional working proficiency",
+		"Professional working proficiency",
+		"full professional proficiency",
+		"Full professional proficiency",
+		"native or bilingual proficiency",
+		"Native or bilingual proficiency"
+	]
+}

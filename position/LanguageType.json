@@ -1,0 +1,25 @@
+{
+    "version": "1.0",
+    "title": "LanguageType",
+    "description": "The competency in a certain language",
+    "type": "object",
+    "properties": {
+        "language": {
+            "description": "The name (e.g. 'English', 'Engels' or 'Englisch') or two-letter code (e.g. 'en') of a language.",
+            "type": "string"
+        },
+        "proficiency": {
+            "description": "The proficiency in that language on a 5 level scale ranging from 'elementary proficiency' to 'native or bilingual proficiency'. If no proficiency is given, the processing tries to detect it from the proficiencyDescription. If that does not work, the default value us the lowest level ('elementary proficiency' ).",
+            "oneOf":[
+                {"type":"null"},
+                {"$ref": "LanguageProficiencyListType.json#"}
+            ]
+
+        },
+		 "proficiencyDescription": {
+            "description": "Free text description of the proficiency, e.g. 'beginner', 'fluent', 'native speaker', etc. If there is no proficiency value, the processing tries to deduce the proficiency value from this field.",
+            "type": ["string", "null"]
+        }
+    },
+	"required": ["language"]
+}

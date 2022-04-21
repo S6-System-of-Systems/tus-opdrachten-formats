@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "title": "PersonContactType",
+  "description": "Contact for applications at the organization and ways of communication.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "Name of the contact",
+      "type": "string"
+    },
+    "role": {
+      "description": "Role of the contact, e.g. 'recruiter' or 'hiring manager'.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "address": {
+      "$ref": "AddressType.json#"
+    },
+    "phone": {
+      "description": "Specifies details of an actual formatted number",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "email": {
+      "description": "Actual email address",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "email"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "anyOf": [
+    {
+      "required": [
+        "address"
+      ]
+    },
+    {
+      "required": [
+        "phone"
+      ]
+    },
+    {
+      "required": [
+        "email"
+      ]
+    }
+  ]
+}

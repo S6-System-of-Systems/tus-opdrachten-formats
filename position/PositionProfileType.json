@@ -1,0 +1,188 @@
+{
+  "version": "1.0",
+  "title": "PositionProfileType",
+  "description": "Complete information about a position and it's requirements.",
+  "type": "object",
+  "properties": {
+    "function": {
+      "description": "Title and classification of the function.",
+      "allOf": [
+        {
+          "$ref": "FunctionType.json#"
+        },
+        {
+          "required": [
+            "title"
+          ]
+        }
+      ]
+    },
+    "location": {
+      "description": "Information on the location of the workplace.",
+      "type": "object",
+      "properties": {
+        "address": {
+          "description": "Address of the workplace.",
+          "$ref": "../communication/AddressType.json#"
+        },
+        "relocationRequired": {
+          "description": "Is there a requirement for the candidate to relocate? Default value is 'false'.",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "address"
+      ]
+    },
+    "travel": {
+      "description": "Information regarding the travelling being necessary in the position.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "required": {
+          "description": "Does this position involve traveling?",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "international": {
+          "description": "Is the traveling international?",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "travelTypes": {
+          "description": "List of travel types (e.g. car, airplane, public transport) that will be necessary in the position.",
+          "type": "array",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "items": {
+                "$ref": "TravelListType.json#"
+              }
+            }
+          ]
+        },
+        "travelPercentage": {
+          "description": "What is the expected travel % of working time per month? The value should be between 0 and 100, default value: 0.",
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "minProperties": 1
+    },
+    "benefits": {
+      "description": "Salary, vacation days and additional benefits.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "BenefitsType.json#"
+        }
+      ]
+    },
+    "contract": {
+      "description": "Contract type, working hours, overtime and shiftwork",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "ContractType.json#"
+        }
+      ]
+    },
+    "educationRequirements": {
+      "description": "Degrees and programs/subjects that are required for the position.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "EducationType.json#"
+        }
+      ]
+    },
+    "workExperienceRequirements": {
+      "description": "Work experience that qualify the candidate for the position.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "WorkExperienceType.json#"
+        }
+      ]
+    },
+    "certificationRequirements": {
+      "description": "List of certifications that are required for the position.",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "CertificationType.json#"
+      }
+    },
+    "skillRequirements": {
+      "description": "List of skills, competencies and knowledge fields that are required for the position.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "skillDescription": {
+      "description": "Free text description of the candidate profile. Usually contains skills. This field will not be used by the 8vance system and is purely for clients.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "languageRequirements": {
+      "description": "List of required language competences of a person.",
+      "type": "array",
+      "items": {
+        "$ref": "LanguageType.json#"
+      }
+    },
+    "description": {
+      "description": "Job posting as free text.",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "function",
+    "location"
+  ],
+  "anyOf": [
+    {
+      "required": [
+        "skillRequirements"
+      ]
+    },
+    {
+      "required": [
+        "skillDescription"
+      ]
+    },
+    {
+      "required" : [
+        "description"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+    "version": "1.0",
+    "title": "TravelListType",
+    "description": "List of travel types.",
+    "enum": [
+        "car",
+		"public transport",
+		"airplane",
+		"bike"
+    ]
+}

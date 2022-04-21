@@ -1,0 +1,10 @@
+{
+    "version": "1.0",
+    "title": "JobStatusCodeList",
+    "description": "Values that describe the status of a job vacancy.",
+    "enum": [
+        "Active",
+        "Closed",
+        "Incomplete"
+    ]
+}

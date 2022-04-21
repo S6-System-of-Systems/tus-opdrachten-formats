@@ -1,0 +1,19 @@
+{
+    "version": "1.0",
+    "title": "ContractListType",
+    "description": "List of contract types.",
+    "enum": [
+        "openEnded",
+		"freelance",
+		"shareholder/owner",
+		"apprentice",
+		"interim",
+		"Interim",
+		"temporary",
+		"volunteer",
+		"internship",
+		"Internship",
+		"traineeship",
+		"Traineeship"
+    ]
+}

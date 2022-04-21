@@ -1,0 +1,26 @@
+{
+    "version": "1.0",
+    "title": "BenefitsListType",
+    "description": "List of benefits for working in a position.",
+    "enum": [
+		"accidentInsurance",
+		"bonuses",
+        "carLeasing",
+		"carInsurance",
+		"companyCar",
+		"companyClothing",
+		"companyLaptop",
+		"companyPhone",
+		"daycare",
+		"educationSupport",
+		"generalInsurance",
+		"healthcareSupport",
+		"laborliabilityInsurance",
+		"pensionPlan",
+		"profitShare",
+		"personalDevelopment",
+		"sportAndExcercise",
+		"stockOptions",
+		"survivorsInsurance"
+    ]
+}
