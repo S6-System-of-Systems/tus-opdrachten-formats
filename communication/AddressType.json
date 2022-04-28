@@ -5,18 +5,58 @@
     "properties": {
         "line": {
             "description": "Street line address",
-            "type": ["string", "null"]
+            "type": [
+                "string",
+                "null"
+            ]
         },
-        "country": {"type": ["string", "null"] },
-		"region": {"type": ["string", "null"] },
-        "city": { "type": "string" },
-        "postalCode": {"type": ["string", "null"] },
-        "postOfficeBox": {"type": ["string", "null"] },
-        "geoLocation": { "$ref": "GeoType.json#" },
-        "formattedAddress": { 
-			"description": "Full address, i.e. a combination of all the available address parts.",
-			"type": ["string", "null"]
-		}
+        "street_name": {
+            "type": "string",
+            "minLength": 2
+        },
+        "street_number": {
+            "type": "string",
+            "minLength": 1
+        },
+        "country": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "region": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "city": {
+            "type": "string"
+        },
+        "postalCode": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "postOfficeBox": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "geoLocation": {
+            "$ref": "GeoType.json#"
+        },
+        "formattedAddress": {
+            "description": "Full address, i.e. a combination of all the available address parts.",
+            "type": [
+                "string",
+                "null"
+            ]
+        }
     },
-	"required": ["city"]
+    "required": [
+        "city"
+    ]
 }

@@ -15,6 +15,82 @@
         "null"
       ]
     },
-    "required": ["title"]
+    "classifications": {
+      "description": "",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "function_id": {
+            "description": "Function id of the classified function in the 8vance taxonomy. Only set for full matches.",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "type_id": {
+            "description": "Type id of the classified function in the 8vance taxonomy.",
+            "type": "number"
+          },
+          "type_label": {
+            "description": "English type label of the classified function.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "category_id": {
+            "description": "Category id of the classified function in the 8vance taxonomy.",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "category_label": {
+            "description": "English category label of the classified function.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "full_match": {
+            "description": "Is this classification based on a full match?",
+            "type": "boolean"
+          },
+          "level": {
+            "description": "Function level.",
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 8
+          }
+        },
+        "required": [
+          "type_id"
+        ]
+      }    
+    },
+    "customer_classifications": {
+      "description": "",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": {
+          "description": "Type of the classification system used",
+          "type": "string"
+        },
+        "classification": {
+          "description": "The actual classification",
+          "type": "string"
+        }
+      }
+    }
   }
 }

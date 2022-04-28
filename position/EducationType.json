@@ -8,7 +8,18 @@
       "description": "List of alternative educational programs/subjects/majors that the candidate should have attended. If more than one program is given, the programs are handled as alternatives (linked by 'or'), e.g. ['Psychology', 'Linguistics'] would mean, that the candidate attended the program 'Psychology' or 'Linguistics', not necessarily both.",
       "type": ["array", "null"],
       "items": {
-        "type": "string"
+        "type": "object",
+        "properties": {
+          "program": {
+            "description": "Name of the educational program.",
+            "type": ["string", "null"]
+          },
+          "program_id": {
+            "description": "Id of the educational program based on the 8vance taxonomy.",
+            "type": ["number", "null"]
+          }
+        },
+        "minProperties": 1
       }
     },
     "educationalDegrees": {

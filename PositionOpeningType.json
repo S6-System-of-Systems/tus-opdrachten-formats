@@ -8,6 +8,10 @@
       "description": "UNIQUE ID of the position opening in the 8vance system.",
       "type": "string"
     },
+    "is_processed_internally": {
+      "description": "Indicates whether the processing command was generated internally",
+      "type": "boolean"
+    },
     "statusCode": {
       "description": "Status of position opening; typical values: Active, Closed, Incomplete.",
       "$ref": "./position/JobStatusCodeListType.json#"
@@ -26,7 +30,7 @@
         "null"
       ]
     },
-	  "customer_source": {
+    "customer_source": {
       "description": "Identifier of the customer source of the profile",
       "type": [
         "string",

@@ -1,7 +1,7 @@
 {
     "version": "1.0",
     "title": "AnnualSalaryListType",
-    "description": "List annual salaray ranges.",
+    "description": "List annual salary ranges.",
     "enum": [
         "< 30,000",
 		"30,000 - 39,000",

@@ -1,9 +1,12 @@
 {
-    "id": "1234567891232342341",
+    "customer_id": "1234567891232342341",
     "statusCode": "Active",
+    "is_processed_internally": false,
     "url": "https://sample/job1.html",
+    "id": "72d36bee67019db6c8d14b552cd7932d6db5a803469bb3cbd4513188bc833df1",
     "source": "EIGHTVANCE",
     "creation_date": "2017-12-12",
+    "import_date": "2017-12-14",
     "languageCode": "en",
     "organization": {
         "is_intermediary": true,
@@ -16,6 +19,7 @@
             "region": "Limburg",
             "city": "Venlo",
             "postalCode": "5928 NL",
+            "postOfficeBox": null,
             "geoLocation": {
                 "latitude": 51.3741600,
                 "longitude": 6.1555160
@@ -24,10 +28,13 @@
         },
         "phone": "+31 77 8080 140",
         "email": "info@8vance.com",
-        "industries": [
-            {"name": "Information services"},
-            {"name": "Human resources"}      
-        ],
+        "industries": [{
+            "industry": "Information services",
+            "industry_type_id": 946529
+        }, {
+            "industry": "Human resources",
+            "industry_type_id": 946476
+        }],
         "size": "<10",
         "geographicalSpan": "multinational < 5 countries",
         "description": "8vance is a high-tech start-up who has developed the first deep matching platform for talents and recruiters. Our platform combines with a virtual recruitment and career assistent called AIMA (Automatic Intelligent Matching Agent) who does all the work. AIMA is based on the 8vance state-of-the-art platform matching technology. This technology matches jobs and talents better and faster."
@@ -35,7 +42,26 @@
     "position": {
         "function": {
             "title": "Senior Data Scientist",
-            "level_modifier": "Senior"
+            "level_modifier": "Senior",
+            "classifications": [{
+                "function_id": 18723027,
+                "type_id": 1568316,
+                "type_label": "Database designers and administrators",
+                "category_id": 1567284,
+                "category_label": "Software developers",
+                "full_match": true,
+                "level": 6
+            }],
+            "customer_classifications": [
+                {
+                    "type": "JDCO",
+                    "classification": "JDCO-type"
+                },
+                {
+                    "type": "ISCO",
+                    "classification": "ISCO-type"
+                }
+            ]
         },
         "location": {
             "address": {
@@ -44,6 +70,7 @@
                 "region": "Limburg",
                 "city": "Venlo",
                 "postalCode": "5928 NL",
+                "postOfficeBox": null,
                 "geoLocation": {
                     "latitude": 51.3741600,
                     "longitude": 6.1555160
@@ -87,11 +114,16 @@
             "shiftWork": false
         },
         "educationRequirements": {
-            "programs": [
-                "Data Science",
-                "Statistics",
-                "Computer Science"
-            ],
+            "programs": [{
+                "program": "Data Science",
+                "program_id": 16919573
+            }, {
+                "program": "Statistics",
+                "program_id": 952325
+            }, {
+                "program": "Computer Science",
+                "program_id": 7524661
+            }],
             "educationalDegrees": [{
                 "degree": "master",
                 "level": 11
@@ -103,12 +135,22 @@
         "workExperienceRequirements": {
             "positions": [{
                 "title": "Data Scientist",
-                "level_modifier": "Senior"
+                "level_modifier": null,
+                "classifications": [{
+                    "function_id": 18723027,
+                    "type_id": 1568316,
+                    "type_label": "Database designers and administrators",
+                    "category_id": 1567284,
+                    "category_label": "Software developers",
+                    "full_match": true,
+                    "level": 6
+                }]
             }],
             "department": "Research and Development",
-            "industries": [
-                {"name": "Computer, internet, information technology, semiconductors"}                
-            ],
+            "industries": [{
+                "industry": "Computer, internet, information technology, semiconductors",
+                "industry_type_id": 946368
+            }],
             "experienceYearsMinimum": 2,
             "experienceYearsMaximum": 5,
             "description": "The candidate should have experience in Data Science for HR.",
@@ -125,17 +167,48 @@
             "issuingAuthority": "ICMB",
             "description": "Certificate of detailed practices for IT service management."
         }],
-        "skillRequirements": [
-            "Python",
-            "Cassandra",
-            "Big Data Analysis"
-        ],
+        "skillRequirements": [{
+            "skill": "Python",
+            "skillLabelId": 958979,
+            "skillConceptId": 958979,
+            "proficiency": "Proficient",
+            "experienceYears": 2
+        }, {
+            "skill": "Cassandra",
+            "skillLabelId": 18723031,
+            "skillConceptId": 18723031,
+            "proficiency": "Proficient",
+            "experienceYears": 2
+        }, {
+            "skill": "Big Data Analysis",
+            "skillLabelId": null,
+            "skillConceptId": null,
+            "proficiency": "Proficient",
+            "experienceYears": 2
+        }],
+        "suspectedSkillRequirements": [{
+            "skill": "Cloud watching",
+            "skillLabelId": 954976,
+            "skillConceptId": 954976,
+            "proficiency": "Proficient",
+            "experienceYears": 2
+        }, {
+            "skill": "Gongoozling",
+            "skillLabelId": 958880,
+            "skillConceptId": 958880,
+            "proficiency": "Proficient",
+            "experienceYears": 2
+        }],
         "languageRequirements": [{
             "language": "English",
-            "proficiency": "Full professional proficiency"
+            "language_id": 953493,
+            "proficiency": "Full professional proficiency",
+            "proficiencyDescription": null
         }, {
             "language": "Dutch",
-            "proficiency": "Limited working proficiency"
+            "language_id": 953491,
+            "proficiency": "Limited working proficiency",
+            "proficiencyDescription": null
         }],
         "description": "We are looking for a Data Scientist to complete our team. You like diving into data and making sense out of it? You do not think that 100k of profiles is already big data? If you have experience in big data analysis, are fit in cassandra and postgre, and also have some programming skills (preferable Python), apply for this position - we have cookies."
     },

@@ -139,7 +139,14 @@
       "description": "List of skills, competencies and knowledge fields that are required for the position.",
       "type": "array",
       "items": {
-        "type": "string"
+        "$ref": "SkillType.json#"
+      }
+    },
+    "suspectedSkillRequirements": {
+      "description": "List of suspected skills, competencies and knowledge fields that are suspected to be required for the position.",
+      "type": "array",
+      "items": {
+        "$ref": "SkillType.json#"
       }
     },
     "skillDescription": {

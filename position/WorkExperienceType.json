@@ -11,7 +11,25 @@
         "null"
       ],
       "items": {
-        "$ref": "FunctionType.json#"
+        "allOf": [
+          {
+            "$ref": "FunctionType.json#"
+          },
+          {
+            "anyOf": [
+              {
+                "required": [
+                  "title"
+                ]
+              },
+              {
+                "required": [
+                  "industries"
+                ]
+              }
+            ]
+          }
+        ]
       }
     },
     "department": {
@@ -28,7 +46,7 @@
         "null"
       ],
       "items": {
-        "$ref": "string"
+        "$ref": "IndustryType.json#"
       }
     },
     "experienceYearsMinimum": {

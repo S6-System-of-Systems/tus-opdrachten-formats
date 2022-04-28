@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "title": "SkillType",
+  "description": "A skill, competence or knowledge field the candidate should be proficient in.",
+  "type": "object",
+  "properties": {
+    "skill": {
+      "description": "Name of the required skill, competence or knowledge field",
+      "type": "string"
+    },
+    "skillLabelId": {
+      "description": "Id of the skill label in the 8vance taxonomy",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "skillConceptId": {
+      "description": "Id of the skill concept in the 8vance taxonomy",
+      "type": ["number", "null"]
+    },
+    "proficiency": {
+      "description": "Required proficiency of the skill, ranging from 'novice' to 'master'.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "SkillProficiencyListType.json#"
+        }
+      ]
+    },
+    "experienceYears": {
+      "description": "Required years of experience with using the skill.",
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "skill"
+  ]
+}

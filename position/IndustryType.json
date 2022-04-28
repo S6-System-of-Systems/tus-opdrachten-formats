@@ -1,0 +1,17 @@
+{
+    "version": "1.0",
+    "title": "IndustryType",
+    "description": "Information about an industry",
+    "type": "object",
+    "properties": {
+        "industry": {
+            "description": "Name of the industry.",
+            "type": "string"
+        },
+        "industry_type_id": {
+            "description": "Id of the industry type based on the 8vance taxonomy.",
+            "type": ["number", "string"]
+        }
+    },
+    "required": ["industry"]
+}

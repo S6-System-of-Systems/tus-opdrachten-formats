@@ -8,6 +8,10 @@
             "description": "The name (e.g. 'English', 'Engels' or 'Englisch') or two-letter code (e.g. 'en') of a language.",
             "type": "string"
         },
+         "language_id": {
+            "description": "Id of the language in the 8vance taxonomy.",
+            "type": ["number", "null"]
+        },
         "proficiency": {
             "description": "The proficiency in that language on a 5 level scale ranging from 'elementary proficiency' to 'native or bilingual proficiency'. If no proficiency is given, the processing tries to detect it from the proficiencyDescription. If that does not work, the default value us the lowest level ('elementary proficiency' ).",
             "oneOf":[
